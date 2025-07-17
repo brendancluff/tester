@@ -1,0 +1,123 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #004e89;
+  --secondary-color: #e1eff6;
+  --accent-color: #faa916;
+  --text-color: #222;
+  --nav-hover-color: #faa916;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Header with Flex Layout */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* h1 inside header */
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Hide menu by default on mobile */
+#menu {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+/* Hide nav menu unless open */
+nav ul {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--nav-hover-color);
+  color: black;
+}
+
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+main > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* Figure Styling */
+figure {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding: 0.75rem;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 2rem;
+}
