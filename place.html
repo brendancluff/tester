@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ireland</title>
-  <link rel="stylesheet" href="styles/place.css" />
-  <script src="scripts/place.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ireland</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header class="page-header">
-    <h1>Ireland</h1>
-  </header>
+    <header class="page-header">
+        <h1>Ireland</h1>
+    </header>
 
-  <main class="main-content">
+    <main class="main-content">
 
-    <div class="hero" id="hero">
+        <!-- <div class="hero" id="hero">
         <img 
             src="images/ireland.webp"
-            srcset="images/cliff.webp 600w, images/ireland.webp 1200w"
-            sizes="(max-width: 767px) 600px, 1200px"
-            alt="Green Irish landscape with cliffs"
-        />
+            <!-- srcset="images/cliff.webp 600w, images/ireland.webp 1200w" -->
+        srcset="images/ireland.webp 1200w, images/cliff.webp 600w"
+        sizes="(max-width: 767px) 600px, 1200px"
+        alt="Green Irish landscape with cliffs"
+        /> -->
+        <div class="hero" id="hero">
+            <picture>
+                <source srcset="images/cliff.webp" media="(max-width: 767px)">
+                <source srcset="images/ireland.webp" media="(min-width: 768px)">
+                <img src="images/ireland.webp" alt="Green Irish landscape with cliffs"
+                    style="width: 100%; height: auto;" />
+            </picture>
 
-      <!-- Data Box -->
-      <section class="data-box" id="dataBox">
-        <div class="section-title">Data</div>
-        <ul>
-          <li><strong>Area:</strong> 70,273 sq km</li>
-          <li><strong>Population:</strong> 5,033,000</li>
-          <li><strong>Capital:</strong> Dublin</li>
-          <li><strong>Languages:</strong> English, Irish</li>
-          <li><strong>Currency:</strong> Euro (€)</li>
-          <li><strong>Time Zone:</strong> UTC+0 / UTC+1</li>
-          <li><strong>Calling Code:</strong> +353</li>
-          <li><strong>Internet TLD:</strong> .ie</li>
-        </ul>
-      </section>
+            <!-- Data Box -->
+            <section class="data-box" id="dataBox">
+                <div class="section-title">Data</div>
+                <ul>
+                    <li><strong>Area:</strong> 70,273 sq km</li>
+                    <li><strong>Population:</strong> 5,033,000</li>
+                    <li><strong>Capital:</strong> Dublin</li>
+                    <li><strong>Languages:</strong> English, Irish</li>
+                    <li><strong>Currency:</strong> Euro (€)</li>
+                    <li><strong>Time Zone:</strong> UTC+0 / UTC+1</li>
+                    <li><strong>Calling Code:</strong> +353</li>
+                    <li><strong>Internet TLD:</strong> .ie</li>
+                </ul>
+            </section>
 
-      <!-- Weather Box -->
-      <section class="weather-box" id="weatherBox">
-        <div class="section-title">
-          Weather <span class="emoji-desktop">⛅</span>
+            <!-- Weather Box -->
+            <section class="weather-box" id="weatherBox">
+                <div class="section-title">
+                    Weather <span class="emoji-desktop">⛅</span>
+                </div>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">--</span></li>
+                    <li><strong>Conditions:</strong> <span id="conditions">--</span></li>
+                    <li><strong>Wind:</strong> <span id="wind">--</span></li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill">--</span></li>
+                </ul>
+                <img src="images/weather-icon.svg" alt="Cloud icon" class="weather-icon-mobile" id="weatherIcon" />
+            </section>
+
         </div>
-        <ul>
-          <li><strong>Temperature:</strong> <span id="temp">--</span></li>
-          <li><strong>Conditions:</strong> <span id="conditions">--</span></li>
-          <li><strong>Wind:</strong> <span id="wind">--</span></li>
-          <li><strong>Wind Chill:</strong> <span id="windchill">--</span></li>
-        </ul>
-        <img src="images/weather-icon.svg" alt="Cloud icon" class="weather-icon-mobile" id="weatherIcon" />
-      </section>
+    </main>
 
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="page-footer">
-    &copy; <span id="year"></span> ☘️ Brendan Cluff ☘️ Ireland<br />
-    Last Modification: <span id="lastModified"></span>
-  </footer>
+    <!-- Footer -->
+    <footer class="page-footer">
+        &copy; <span id="year"></span> ☘️ Brendan Cluff ☘️ Ireland<br />
+        Last Modification: <span id="lastModified"></span>
+    </footer>
 
 </body>
-</html>
 
+</html>
