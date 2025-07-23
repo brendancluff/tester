@@ -6,6 +6,7 @@
   <title>Ireland</title>
   <link rel="stylesheet" href="styles/place.css" />
   <script src="scripts/place.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,15 +16,16 @@
 
   <main class="main-content">
 
-    <div class="hero">
-      <img 
-        src="images/ireland.webp"
-        srcset="images/cliff.webp 600w, images/ireland.webp 1200w"
-        sizes="(max-width: 767px) 100vw, 100vw"
-        alt="Green Irish landscape with cliffs"
-      />
+    <div class="hero" id="hero">
+        <img 
+            src="images/ireland.webp"
+            srcset="images/cliff.webp 600w, images/ireland.webp 1200w"
+            sizes="(max-width: 767px) 600px, 1200px"
+            alt="Green Irish landscape with cliffs"
+        />
 
-      <section class="data-box">
+      <!-- Data Box -->
+      <section class="data-box" id="dataBox">
         <div class="section-title">Data</div>
         <ul>
           <li><strong>Area:</strong> 70,273 sq km</li>
@@ -37,22 +39,24 @@
         </ul>
       </section>
 
-      <section class="weather-box">
+      <!-- Weather Box -->
+      <section class="weather-box" id="weatherBox">
         <div class="section-title">
           Weather <span class="emoji-desktop">⛅</span>
         </div>
         <ul>
-          <li><strong>Temperature:</strong> <span id="temp">40°F</span></li>
-          <li><strong>Conditions:</strong> Cloudy</li>
-          <li><strong>Wind:</strong> <span id="wind">5 mph</span></li>
+          <li><strong>Temperature:</strong> <span id="temp">--</span></li>
+          <li><strong>Conditions:</strong> <span id="conditions">--</span></li>
+          <li><strong>Wind:</strong> <span id="wind">--</span></li>
           <li><strong>Wind Chill:</strong> <span id="windchill">--</span></li>
         </ul>
-        <img src="images/weather-icon.svg" alt="Cloud icon" class="weather-icon-mobile" />
+        <img src="images/weather-icon.svg" alt="Cloud icon" class="weather-icon-mobile" id="weatherIcon" />
       </section>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="page-footer">
     &copy; <span id="year"></span> ☘️ Brendan Cluff ☘️ Ireland<br />
     Last Modification: <span id="lastModified"></span>
@@ -60,3 +64,4 @@
 
 </body>
 </html>
+
