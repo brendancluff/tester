@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,14 +12,13 @@ body {
 }
 
 .page-header {
-  background-color: #b3003b;
+  background-color: orange;
   color: white;
   text-align: center;
   padding: 1rem 0;
   font-size: 2rem;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
@@ -34,7 +32,6 @@ body {
   object-fit: cover;
 }
 
-/* Data & Weather Boxes */
 .data-box, .weather-box {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 1rem;
@@ -66,7 +63,6 @@ body {
   border-radius: 6px;
 }
 
-/* List Styling */
 ul {
   list-style: none;
   padding: 0;
@@ -79,16 +75,14 @@ ul {
   font-size: 0.95rem;
 }
 
-/* Weather Icon for Mobile */
 .weather-icon-mobile {
   display: none;
   margin-top: 1rem;
   max-width: 50px;
 }
 
-/* Footer */
 .page-footer {
-  background-color: #c62848;
+  background-color: orange;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -97,7 +91,6 @@ ul {
   border-top: 3px solid #fff;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .hero {
     display: block;
