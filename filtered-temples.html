@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temples</title>
+  <meta name="description" content="An interactive gallery showcasing various temples from around the world.">
+  <meta name="author" content="Brendan Cluff">
+  <title>Temples Album</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/filtered-temples.css">
   <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
@@ -16,13 +20,14 @@
 
   <header>
     <h1>Temple Album</h1>
-    <nav id="filterNav">
-      <button data-filter="home">Home</button>
-      <button data-filter="old">Old</button>
-      <button data-filter="new">New</button>
-      <button data-filter="large">Large</button>
-      <button data-filter="small">Small</button>
+    <nav id="filterNav" aria-label="Temple Filter Navigation">
+      <a href="#templeList" data-filter="home">Home</a>
+      <a href="#templeList" data-filter="old">Old</a>
+      <a href="#templeList" data-filter="new">New</a>
+      <a href="#templeList" data-filter="large">Large</a>
+      <a href="#templeList" data-filter="small">Small</a>
     </nav>
+
 
   </header>
 
@@ -79,7 +84,7 @@
   </main>
 
   <footer>
-<p>&copy;2025 <span id="year"></span> Brendan Cluff, Arizona</p>
+    <p>&copy;2025 <span id="year"></span> Brendan Cluff, Arizona</p>
     <p id="lastModified"></p>
   </footer>
 
